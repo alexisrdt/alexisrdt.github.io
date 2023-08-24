@@ -1,0 +1,14 @@
+# Ignore all
+*
+
+# Except GitHub
+!/.github
+!/.github/**
+
+# Except Git
+!.gitignore
+!LICENSE.md
+!README.md
+
+# Except source
+!index.html
