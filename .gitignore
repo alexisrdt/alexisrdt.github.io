@@ -12,3 +12,8 @@
 
 # Except source
 !index.html
+!fraus.html
+!header.html
+!footer.html
+!style.css
+!script.js

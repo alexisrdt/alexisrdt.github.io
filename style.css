@@ -1,0 +1,21 @@
+* {
+	font-family: Arial, sans-serif;
+}
+
+nav ul {
+	display: flex;
+
+	list-style-type: none;
+}
+
+section:nth-child(odd) {
+	background-color: white;
+}
+
+section:nth-child(even) {
+	background-color: whitesmoke;
+}
+
+a[href^="mailto"]::before {
+	content: "\2709\00a0";
+}
