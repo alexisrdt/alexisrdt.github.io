@@ -1,3 +1,3 @@
-# alexisrdt.github.io
+# [alexisrdt.github.io](https://alexisrdt.github.io/)
 
-Fraus website
+Portfolio website. Presents me and my projects. Uses [GitHub Pages](https://pages.github.com/).
