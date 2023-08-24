@@ -17,3 +17,5 @@
 !footer.html
 !style.css
 !script.js
+!/resources
+!/resources/**

@@ -5,12 +5,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Fraus</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer="defer"></script>
 	</head>
 	<body>
-		{% include header.html %}
 		<main>
 			<h1>Fraus</h1>
+			<section>
+				<h2>What is Fraus?</h2>
+				<p>
+					Fraus is a rendering engine based on Vulkan and written in C.
+					It is a personal project that I started in order to learn Vulkan and rendering.
+					It is still in development but can already be used to display a single object.
+				</p>
+				<a class="link-button" href="https://github.com/alexisrdt/Fraus" target="_blank">Go to the repository</a>
+			</section>
+			<section>
+				<h2>Plans</h2>
+				<p>
+					I am currently working on adding first person camera controls.
+					I will then work on being able to display multiple objects.
+			</section>
+			<section>
+				<h2>Why "Fraus"?</h2>
+				<p>
+					Fraus is a rendering engine, it renders images that mimic reality.
+					Therefore, it is kind of misleading and mischievious.
+					Also, it is based on Vulkan, which is the name of the Roman god of the forge.
+					It then seemed reasonable to use "Fraus" which is the name of the Roman goddess of deception.
+				</p>
+			</section>
 		</main>
-		{% include footer.html %}
 	</body>
 </html>

@@ -1,21 +1,143 @@
+/* General rules */
 * {
 	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+}
+
+/* Header navbar */
+nav {
+	background-color: darkcyan;
+	color: white;
 }
 
 nav ul {
 	display: flex;
+	justify-content: space-evenly;
+
+	margin: 0;
+	padding: 0;
 
 	list-style-type: none;
 }
 
-section:nth-child(odd) {
-	background-color: white;
+nav ul li {
+	width: 100%;
+
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 2em;
+	color: white;
+
+	border-right: 1px solid black;
 }
 
-section:nth-child(even) {
-	background-color: whitesmoke;
+nav ul li:last-child {
+	border-right: none;
 }
 
-a[href^="mailto"]::before {
-	content: "\2709\00a0";
+nav ul li a {
+	display: block;
+	width: 100%;
+
+	text-decoration: none;
+	font: inherit;
+	color: inherit;
+}
+
+/* Main content */
+#photo {
+	display: block;
+
+	text-align: center;
+}
+
+#photo img {
+	width: 25%;
+	aspect-ratio: 1/1;
+
+	border-radius: 100%;
+}
+
+@media all and (max-width: 600px) {
+	#photo img {
+		width: 50%;
+	}
+}
+
+figcaption {
+	color: dimgray;
+}
+
+section {
+	padding: 1em;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	animation: 1s ease-out 0s 1 fade-in;
+}
+
+hr {
+	width: 80%;
+}
+
+h1, h2 {
+	margin: 0;
+
+	font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 5em;
+	
+	opacity: 1;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+.link-button {
+	display: block;
+	
+	width: fit-content;
+	margin: auto;
+
+	padding: 0.5em 1em;
+
+	border-radius: 0.5em;
+
+	background-color: darkcyan;
+	color: white;
+
+	text-decoration: none;
+
+	cursor: pointer;
+}
+
+/* Footer */
+footer {
+	background-color: black;
+	color: white;
+}
+
+footer a {
+	color: darkcyan;
+	text-decoration: none;
 }
