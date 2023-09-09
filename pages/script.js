@@ -1,12 +1,12 @@
 "use strict";
 
 // Insert header
-fetch("/header.html")
+fetch("./header.html")
 	.then(response => response.text())
 	.then(headerCode => document.body.insertAdjacentHTML("afterbegin", headerCode));
 
 // Insert footer
-fetch("/footer.html")
+fetch("./footer.html")
 	.then(response => response.text())
 	.then(footerCode => document.body.insertAdjacentHTML("beforeend", footerCode));
 
