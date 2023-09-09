@@ -1,38 +1,20 @@
-/* Define some variables */
+/* Import theme variables */
+@import url("/vars.css");
+
 :root {
-	/* Color theme */
-	--primary-light: #ffffff;
-	--primary-dark: #000000;
-	--primary-theme: #005050;
-
-	--secondary-light: #e0e0e0;
-	--secondary-dark: #505050;
-
-	/* Apply colors */
-	--main-background-color: var(--primary-light);
-	--main-text-color: var(--primary-dark);
-
-	--main-link-color: var(--primary-theme);
-
-	--header-background-color: var(--primary-theme);
-	--header-text-color: var(--primary-light);
-
-	--footer-background-color: var(--secondary-light);
-
-	--caption-text-color: var(--secondary-dark);
+	--main-font: Arial, sans-serif;
+	--special-font: 'Times New Roman', Times, serif;
 }
 
 /* General rules */
-* {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-}
-
 body {
 	margin: 0;
 
 	background-color: var(--main-background-color);
 	color: var(--main-text-color);
+
+	font-family: var(--main-font);
+	font-size: 16px;
 }
 
 /* Header navbar */
@@ -55,7 +37,7 @@ nav ul li {
 	width: 100%;
 
 	text-align: center;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: var(--special-font);
 	font-size: 2em;
 
 	border-right: 2px solid var(--header-text-color);
@@ -106,27 +88,45 @@ nav ul li a span {
 }
 
 /* Main content */
-#photo {
+figure {
 	display: block;
 
 	text-align: center;
 }
 
-#photo img {
+figcaption {
+	margin-top: 1em;
+}
+
+figure img {
+	box-shadow: 0 0 1em var(--main-text-color);
+}
+
+.photo img {
 	width: 25%;
 	aspect-ratio: 1/1;
 
 	border-radius: 100%;
+
+	transition: rotate 1s ease-out;
+}
+
+.photo img:hover {
+	rotate: -360deg;
 }
 
 @media (max-width: 600px) {
-	#photo img {
+	.photo img {
 		width: 50%;
 	}
 }
 
-figcaption {
-	color: var(--caption-text-color);
+.screenshot img {
+	max-width: 1000px;
+	width: 75%;
+	aspect-ratio: 16/9;
+
+	box-shadow: 0 0 1em var(--main-text-color);
 }
 
 section {
@@ -156,7 +156,7 @@ hr {
 h1, h2 {
 	margin: 0;
 
-	font-family: 'Times New Roman', Times, serif;
+	font-family: var(--special-font);
 }
 
 h1 {
@@ -168,6 +168,16 @@ h1 {
 
 h2 {
 	font-size: 2em;
+}
+
+br {
+	display: block;
+	content: "";
+	margin-top: 1em;
+}
+
+a {
+	color: var(--main-link-color);
 }
 
 .link-button {
@@ -183,6 +193,9 @@ h2 {
 	background-color: var(--main-link-color);
 	color: var(--main-background-color);
 
+	font-family: var(--special-font);
+	font-size: 1.2em;
+
 	text-decoration: none;
 
 	cursor: pointer;
@@ -190,6 +203,15 @@ h2 {
 
 .link-button-container {
 	display: flex;
+	gap: 1em;
+
+	margin: 3em 0;
+}
+
+@media (max-width: 600px) {
+	.link-button-container {
+		flex-direction: column;
+	}
 }
 
 /* Footer */
@@ -205,8 +227,4 @@ footer {
 	footer {
 		grid-template-columns: 1fr;
 	}
-}
-
-footer a {
-	color: var(--main-link-color);
 }

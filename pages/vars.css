@@ -1,0 +1,23 @@
+/* Define theme variables */
+:root {
+	/* Color theme */
+	--primary-light: #ffffff;
+	--primary-dark: #000000;
+	--primary-theme: #005050;
+
+	--secondary-light: #e0e0e0;
+	--secondary-dark: #505050;
+
+	/* Apply colors */
+	--main-background-color: var(--primary-light);
+	--main-text-color: var(--primary-dark);
+
+	--main-link-color: var(--primary-theme);
+
+	--header-background-color: var(--primary-theme);
+	--header-text-color: var(--primary-light);
+
+	--footer-background-color: var(--secondary-light);
+
+	--caption-text-color: var(--secondary-dark);
+}
