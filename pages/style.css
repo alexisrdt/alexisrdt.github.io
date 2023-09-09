@@ -6,8 +6,6 @@
 
 /* General rules */
 body {
-	position: relative;
-
 	margin: 0;
 
 	background-color: var(--main-background-color);
@@ -216,10 +214,6 @@ a {
 
 /* Footer */
 footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 10px;
