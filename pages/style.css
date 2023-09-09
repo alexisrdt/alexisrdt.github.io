@@ -1,6 +1,4 @@
-/* Import theme variables */
-@import url("/vars.css");
-
+/* Font variables */
 :root {
 	--main-font: Arial, sans-serif;
 	--special-font: 'Times New Roman', Times, serif;
